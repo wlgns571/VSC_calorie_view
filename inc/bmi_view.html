@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="/inc/js/jquery.min.js"></script>
+	
+	<!--[if lt IE 9]><script src="/javascript/html5shiv.js"></script><![endif]-->
+	<script src="/inc/js/jquery.placeholder.enhanced-1.5.js"></script>
+	<script src="/inc/js/common.js?2021082501"></script>
+	<script src="/inc/js/jquery.cycle2.js"></script>
+	<script type="text/javascript" src="/inc/js/common.js?2019032001"></script>
+	<script type="text/javascript" src="/inc/js/newmyprofile.js?20220609113137"></script>
+	<link rel="stylesheet" href="/inc/css/style.css?2022021402">
+
+	<!-- 20160204 자바스크립트 추가 -->	
+	<script src="/inc/js/common3.js"></script>
+	<script src="/inc/js/common_sub.js"></script>
+	<!-- //20160204 자바스크립트 추가 -->
+</head>
+<body>
+    <!-- contents // -->
+		<div class="contents my">
+			
+			
+
+			<script>
+				var getValue = JSON.parse(localStorage.getItem("cast"));
+                console.log(getValue);
+			</script>
+
+			<p class="path">나의 BMI 지수 확인</p>
+			<h2>나의 BMI 지수 확인</h2>
+
+			<div class="tbl-y-wrap r5 rel">
+				<table class="tbl-y view">
+					<colgroup>
+						<col style="width:144px"/>
+						<col style="width:auto"/>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>성별 </th>
+							<td></td>
+						</tr>
+						<tr>
+							<th> 연령</th>
+							<td>1993년 09월 14일</td>
+						</tr>
+						<tr>
+							<th>키</th>
+							<td>182cm</td>
+						</tr>
+						<tr>
+							<th>몸무게</th>
+							<td>68kg</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="bmi-wrap r5">
+				<div class="bmi">
+					<p class="tit"><span class="p-red">비만도(BMI)</span> 검사 결과</p>
+					<div class="graph">
+						<div class="inner">
+							<img src="/img/my/img_bmi.png" alt="" />
+							<a href="javascript:myInfo();" id="grapnavi" class="btn-point" style="left:0%">
+								<img src="/img/btn/btn_point.png" alt="" />
+								<span id="bmicnt">5</span>
+							</a>
+						</div>
+					</div>
+					<ul class="bul-arr-list">
+						<li id="bmi_text"></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="btn-ac">
+				<a href="/inc/bmi_write.html"><img src="/img/btn/btn_re.gif" alt="다시하기" /></a>
+			</div>
+		</div><!-- // contents -->
+</body>
+</html>

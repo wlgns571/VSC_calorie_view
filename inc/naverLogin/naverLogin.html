@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js"
+        charset="utf-8"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+</head>
+
+<body>
+    <button data-toggle="modal" data-target="#myModal">로그인</button>
+
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header"> <button type="button" class="close" data-dismiss="modal"
+                        aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <label>
+                        <strong id="user_blind" class="user_blind" style="display: block;">아이디</strong>
+                        <input type="text">
+
+                    </label>
+                </div>
+                <label class="passLabel"> 
+                    <strong id="user_blind" class="user_blind" style="display: block;">비밀번호</strong>
+                    <input type="password">
+                </label>
+                <div class="modal-body2">
+                    <!-- 네이버 로그인 버튼 노출 영역 -->
+                    <div id="naver_id_login"></div>
+
+                </div>
+                <div class="modal-footer"> <button type="button" class="btn btn-primary">확인</button> <button
+                        type="button" class="btn btn-default" data-dismiss="modal">취소</button> </div>
+            </div>
+        </div>
+    </div>
+
+    <script>  // 모달 버튼에 이벤트를 건다.
+        $('#openModalBtn').on('click', function () {
+            $('#modalBox').modal('show');
+        });  // 모달 안의 취소 버튼에 이벤트를 건다.
+        $('#closeModalBtn').on('click', function () {
+            $('#modalBox').modal('hide');
+        });
+    </script>
+<!-- //네이버 로그인 버튼 노출 영역 -->
+<script type="text/javascript">
+    var naver_id_login = new naver_id_login("5S5J5UsEaqe2NWToLup8", "http://127.0.0.1:5500");
+    var state = naver_id_login.getUniqState();
+    naver_id_login.setButton("green", 2,40);
+    naver_id_login.setDomain("http://127.0.0.1:5500");
+    naver_id_login.setState(state);
+    naver_id_login.setPopup();
+    naver_id_login.init_naver_id_login();
+</script>
+
+   
+
+</body>
+
+</html>
